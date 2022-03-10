@@ -1,0 +1,27 @@
+body {
+  font-family: 'Smooch Sans', sans-serif, 'Lobster', cursive;
+  background-image: url('https://images.unsplash.com/photo-1589352341122-7a950a5d6266?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+  background-size: cover;
+   font-weight: bolder;
+   color: white;
+   text-align: center;
+   font-size: -webkit-xxx-large;
+
+}
+
+ h1 {
+   color: goldenrod;
+ }
+ p {
+    /* -webkit-text-stroke: 1px gray; */
+text-shadow: -2px 0px 17px rgba(16,12,12,1);
+ }
+
+button {
+  color: goldenrod;
+background: black;
+font-weight: 900;
+border-width: thick;
+width: 156px;
+height: 38px;
+}
