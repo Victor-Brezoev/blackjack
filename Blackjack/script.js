@@ -1,3 +1,8 @@
+let player = {
+  name : 'Victor',
+  chips: 100,
+  bet: 10
+}
 let messageEl = document.getElementById('message-el')
 let cardsEl = document.getElementById('cards-el')
 let sumEl = document.getElementById('sum-el')
@@ -7,10 +12,7 @@ let sum = 0
 let message = ''
 let hasBlackJack = false
 let gameOn = false
-let player = {
-  name : 'Victor',
-  chips: 100
-}
+
 
 playerEl.textContent =  player.name + ": $" + player.chips
 
@@ -50,6 +52,7 @@ function renderGame(){
     gameOn = false
   }
   messageEl.textContent = message
+  betting()
 }
 
 
@@ -60,4 +63,13 @@ function newCard (){
     cards.push(card)
     renderGame()
   }
+}
+
+function  betting(){
+  if( sum === 21){
+       player.chips = ` ${parseInt(player.chips) + parseInt(player.bet)}`
+ } else if( sum >= 22){
+     player.chips =  ` ${player.chips - player.bet}`
+ }
+ playerEl.textContent = `Victor: $${player.chips}`
 }
